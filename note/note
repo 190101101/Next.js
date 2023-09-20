@@ -1,0 +1,114 @@
+base\01 entrance\01 entrance
+
+base\02 installations\02 development ram
+base\02 installations\03 Single Page Application Logic
+base\02 installations\04 Installation
+base\02 installations\05 Tailwind CSS Structure
+base\02 installations\06 Home Page Setup
+base\02 installations\07 Theme Introduction
+base\02 installations\08 Tailwind Variables and Font Settings
+base\02 installations\09 document Page Settings
+
+base\03 header\10 Header Component
+base\03 header\11 What is Click Outside?
+base\03 header\12 Search Component
+base\03 header\13 Header Responsive
+
+base\04 slider\14 Carousel Component
+base\04 slider\15 React Slick Setup
+
+base\05 theme\16 Campaigns Component
+base\05 theme\17 Menu Wrapper Component
+base\05 theme\18 Menu Item Component
+base\05 theme\19 About Component
+base\05 theme\20 Product Detail Page
+base\05 theme\21 Input Component
+base\05 theme\22 Reservation Component
+base\05 theme\23 Editing Reservation Input
+base\05 theme\24 React Formic Setup
+base\05 theme\25 Validation Process with Yup
+base\05 theme\26 Customers Component
+base\05 theme\27 Customer Slider Making
+base\05 theme\28 Footer Component
+
+base\06 next feature\29 Next.js Layout Structure
+base\06 next feature\30 Next.js Link Usage
+
+base\07 login and register\31 Login Page
+base\07 login and register\32 Register Page
+base\07 login and register\33 Admin Page
+
+base\08 cart and order\34 Cart Page Total
+base\08 cart and order\35 Cart Page Table
+base\08 cart and order\36 Order Page
+
+base\09 profile\37 Profile Card
+base\09 profile\38 Profile Account Settings
+base\09 profile\39 Profile Page Responsive
+base\09 profile\40 Profile Page Password Component
+base\09 profile\41 Profile Page Order Component
+
+base\10 admin\42 Admin Page
+base\10 admin\43 Admin Page Product Component
+base\10 admin\44 Admin Page Order Component
+base\10 admin\45 Admin Page Category Component
+base\10 admin\46 Admin Page Footer Component
+
+base\11 redux\47 What is Redux? Redux-Toolkit Installation
+base\11 redux\48 Product Detail Price Calculation with Redux-Toolkit
+base\11 redux\49 Redux-Toolkit Store Installation
+base\11 redux\50 Redux-Toolkit addProduct and reset Actions
+
+base\12 mongodb\51 MongoDB Installation
+base\12 mongodb\52 Creating a User Model
+base\12 mongodb\53 MongoDB Connection
+base\12 mongodb\54 User Get and Post Transactions
+
+base\13 next auth\55 Next-Auth Setup
+base\13 next auth\56 Auth Transactions with Github
+base\13 next auth\57 Github Database Registration
+base\13 next auth\58 Register API Operation
+base\13 next auth\59 Register Client Process
+base\13 next auth\60 React-Toastify Installation
+base\13 next auth\61 Next-Auth Credentials Provider
+base\13 next auth\62 Creating an Admin Cookie
+base\13 next auth\63 Cookie getServerSideProps
+base\13 next auth\64 Profile Page Session Transactions
+base\13 next auth\65 Profile Page getSession Operation
+base\13 next auth\66 Next.js id Operations
+base\13 next auth\67 Profile Page General Update Procedures
+
+base\14 category server\68 Category Get and Post Transactions
+base\14 category server\69 Category Delete Operation
+base\14 category server\70 Menu Category Editing
+
+base\15 product server\71 AddProduct Component
+base\15 product server\72 Creating a Product Model
+base\15 product server\73 Product Get and Post Transactions
+base\15 product server\74 Product Image Operations
+base\15 product server\75 Cloudinary Settings
+base\15 product server\76 Creating a New Product
+base\15 product server\77 Menu Page
+base\15 product server\78 Product Delete Process
+base\15 product server\79 Product Detail Page
+
+base\16 order server\80 Order Model and API Transactions
+base\16 order server\81 Creating a New Order
+base\16 order server\82 Admin Order Management
+base\16 order server\83 Profile Order Transactions
+
+base\17 search\84 search
+
+base\18 footer server\85 Footer Model Creation
+base\18 footer server\86 Creating Footer API
+base\18 footer server\87 Footer Data Dressing
+base\18 footer server\88 Admin Footer Transactions
+
+base\19 route change progress\89 Route Change Progress Setup
+
+base\20 refactoring\90 Refactoring 1
+base\20 refactoring\91 Refactoring 2
+
+base\21 task\92 What Can Be Added to the Project?
+
+base\22 deployment\93 deployment
