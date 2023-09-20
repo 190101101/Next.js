@@ -1,10 +1,9 @@
 import {useState} from 'react'
 
 import {FaUserAlt, FaShoppingCart, FaSearch} from 'react-icons/fa'
-import OutsideClickHandler from 'react-outside-click-handler';
 
 import Logo from '../UI/Logo'
-import Title from '../UI/Title'
+import Search from '../UI/Search'
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
@@ -26,7 +25,7 @@ const Header = () => {
             <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer transition-all ">
               <a href="">About</a> 
             </li>
-            <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer transition-all ">
+            <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer transition-all">
               <a href="">Book Table</a> 
             </li>
           </ul>
@@ -47,12 +46,11 @@ const Header = () => {
         </div>
       </div>
       
-      {isSearchModal &&
-        (<OutsideClickHandler onOutsideClick={() => setIsSearchModal(false)}>
-          <div className='text-9xl text-white'>
-              <Title addClass="text-red-700">search</Title>
-          </div>
-        </OutsideClickHandler>)
+      {isSearchModal && 
+        <Search 
+          isSearchModal={isSearchModal} 
+          setIsSearchModal={setIsSearchModal}
+        />
       }
 
     </div>

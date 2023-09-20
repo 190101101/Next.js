@@ -4,7 +4,7 @@ import Home from './home/home'
 
 export default function index() {
   return (
-    <div className='bg-black h-screen'>
+    <div className='h-screen'>
       <Header/>
       <Home/>
     </div>    
