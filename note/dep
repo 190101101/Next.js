@@ -1,3 +1,1 @@
-npx create-react-app .
-npx create-next-app@latest
-npm install react-icons --save
+npm install react-outside-click-handler
