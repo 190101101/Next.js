@@ -12,7 +12,6 @@ const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
   const router = useRouter();
-  console.log(router)
 
   return (
     <div className={`h-[5.5rem] z-50 relative ${router.asPath == '/' ? 'bg-transparent' : 'bg-secondary'}`}>
