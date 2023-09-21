@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React, { Component } from "react";
 import Slider from "react-slick";
 import Title from "./Title";
 

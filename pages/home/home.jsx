@@ -1,9 +1,11 @@
+import Campaigns from "@/components/UI/Campaigns"
 import Carousel from "@/components/UI/Carousel"
 
 const home = () => {
   return (
-    <div className="relative">
+    <div className="">
       <Carousel/>
+      <Campaigns/>
     </div>
   )
 }
