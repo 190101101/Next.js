@@ -1,1 +1,2 @@
-npm install react-outside-click-handler
+npm install react-slick --save
+npm install slick-carousel --save

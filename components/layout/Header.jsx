@@ -6,15 +6,19 @@ import {GiHamburgerMenu,GiCancel} from "react-icons/gi"
 import Logo from "../UI/Logo"
 import Search from "../UI/Search"
 
+import {useRouter} from 'next/router';
+
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
+  const router = useRouter();
+  console.log(router)
 
   return (
-    <div className="h-[5.5rem] bg-secondary">
+    <div className={`h-[5.5rem] z-50 relative ${router.asPath == '/' ? 'bg-transparent' : 'bg-secondary'}`}>
       <div className="container mx-auto text-white flex justify-between items-center h-full">
         <Logo/>
-        <nav className={`${isMenuModal === true && "!grid place-content-center"} sm:flex hidden sm:bg-transparent bg-white sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-full sm:text-white text-black flex-col items-center`}>
+        <nav className={`${isMenuModal === true && "!grid place-content-center"} h-screen sm:flex hidden sm:bg-transparent bg-white sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-full sm:text-white text-black flex-col items-center`}>
           <ul className="flex gap-x-2 sm:flex-row flex-col items-center ">
             <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer transition-all ">
               <a href="">Home</a> 
