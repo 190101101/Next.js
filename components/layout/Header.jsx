@@ -3,8 +3,8 @@ import {useState} from "react"
 import {FaUserAlt, FaShoppingCart, FaSearch} from "react-icons/fa"
 import {GiHamburgerMenu,GiCancel} from "react-icons/gi"
 
-import Logo from "../UI/Logo"
-import Search from "../UI/Search"
+import Logo from "../ui/Logo"
+import Search from "../ui/Search"
 
 import {useRouter} from 'next/router';
 
