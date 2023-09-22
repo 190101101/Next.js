@@ -18,7 +18,7 @@ const MenuItem = ({image}) => {
           Corporis.
         </p>
       </div>
-      <div className="flex justify-between items-center mt-14 p-3">
+      <div className="flex justify-between items-center mt-14   ">
         <span>$20</span>
         <button className="btn-primary !w-10 !h-10 !rounded-full !p-0 grid place-content-center">
           <RiShoppingCart2Fill />
