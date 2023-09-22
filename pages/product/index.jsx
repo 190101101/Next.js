@@ -31,7 +31,7 @@ const index = () => {
 
             <div className="my-6">
                 <div className="">
-                    <p className="text-xl font-bold">Choose addtional ingredients</p>
+                    <p className="text-xl-2 font-bold">Choose addtional ingredients</p>
                 </div>
                 <div className="flex items-center md:justify-start sm:justify-center gap-x-4 my-6">
                     <label className="flex items-center gap-x-1">
