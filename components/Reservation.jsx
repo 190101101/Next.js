@@ -1,38 +1,67 @@
+import { useFormik } from 'formik';
+
 import Image from "next/image";
 import Input from "./form/Input";
 import Title from "./ui/Title";
 
 const Reservation = () => {
+  const onSubmit = async (values, actions) => {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    actions.resetForm();
+  }
+
+  const {values, handleChange, handleSubmit} = useFormik({
+    initialValues: {
+      fullname:'',
+      phone:'',
+      email:'',
+      persons:'',
+      date:'',
+    },
+    onSubmit,
+
+    /*
+    onSubmit:(values) => {
+      console.log(JSON.stringify(values, null, 2));
+    }
+    */
+  })
+  
   const inputs = [
     {
       id:1,
       name:'fullname',
       type:'text',
       placeholder:'your full name',
+      value: values.fullname,
     },
     {
       id:2,
       name:'phone',
       type:'number',
       placeholder:'your phone number',
+      value: values.phone,
     },
     {
       id:3,
       name:'email',
       type:'email',
       placeholder:'your email',
+      value: values.email,
     },
     {
       id:4,
       name:'persons',
       type:'number',
       placeholder:'how many persons?',
+      value: values.persons,
     },
     {
       id:5,
-      name:'persons',
+      name:'date',
       type:'datetime-local',
       placeholder:'',
+      value: values.date,
     },
 ];
 
@@ -40,16 +69,15 @@ const Reservation = () => {
     <div className="container mx-auto py-12 ">
       <Title addClass="text-[40px] mb-10">Book a Table</Title>
       <div className="flex justify-between flex-wrap-reverse items-center gap-10">
-        <div className="lg:flex-1 w-full">
+        <form onSubmit={handleSubmit} className="lg:flex-1 w-full">
           <div className="flex flex-col gap-y-3">
-            {inputs.map((input) => 
-              <Input key={input.id} {...input}
-              />
-            )}
-
+              {inputs.map((input) => 
+                <Input key={input.id} {...input} onChange={handleChange}
+                />
+              )}
           </div>
-          <button className="btn-primary mt-4">BOOK NOW</button>
-        </div>
+          <button type="submit" className="btn-primary mt-4">BOOK NOW</button>
+        </form>
 
         <div className="lg:flex-1 w-full !h-[384px]">
           <Image src="/images/map.png" alt=""  width={500} height={500}/>

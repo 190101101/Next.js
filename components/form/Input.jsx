@@ -1,7 +1,6 @@
 
 const Input = (props) => {
   const {type, placeholder, ...inputs} = props;
-  console.log(inputs);
 
   return (
     <div className="w-full">
