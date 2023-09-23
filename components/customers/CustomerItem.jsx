@@ -1,8 +1,9 @@
 import Image from 'next/image';
 
 const CustomerItem = ({image}) => {
+
   return (
-    <div className='mt-5'>
+    <div className='mt-5 mx-4'>
       <div className='p-6 bg-secondary text-white rounded-[5px]'>
         <span>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iste quos molestias modi dolorum, possimus, natus repudiandae cupiditate sed, placeat iure excepturi itaque. Culpa neque provident commodi nobis dolores cumque?

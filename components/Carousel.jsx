@@ -40,7 +40,7 @@ const Carousel = () => {
         </div>
         {/*  */}
         <Slider {...settings}>
-        <dir>
+            <dir>
                 <div className="text-white mt-48 flex flex-col items-start gap-y-10">
                     <Title addClass="text-6xl">Fast Food Restaurant</Title>
                     <p className="text-sm sm:w-2/5 w-full">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nihil aliquid iste laudantium sequi reprehenderit nobis suscipit ipsum facilis beatae soluta a. Accusantium libero qui reiciendis voluptatem ullam praesentium sunt.</p>
