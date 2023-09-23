@@ -3,17 +3,50 @@ import Input from "./form/Input";
 import Title from "./ui/Title";
 
 const Reservation = () => {
+  const inputs = [
+    {
+      id:1,
+      name:'fullname',
+      type:'text',
+      placeholder:'your full name',
+    },
+    {
+      id:2,
+      name:'phone',
+      type:'number',
+      placeholder:'your phone number',
+    },
+    {
+      id:3,
+      name:'email',
+      type:'email',
+      placeholder:'your email',
+    },
+    {
+      id:4,
+      name:'persons',
+      type:'number',
+      placeholder:'how many persons?',
+    },
+    {
+      id:5,
+      name:'persons',
+      type:'datetime-local',
+      placeholder:'',
+    },
+];
+
   return (
     <div className="container mx-auto py-12 ">
       <Title addClass="text-[40px] mb-10">Book a Table</Title>
-      <div className="flex justify-between flex-wrap items-center gap-10">
+      <div className="flex justify-between flex-wrap-reverse items-center gap-10">
         <div className="lg:flex-1 w-full">
           <div className="flex flex-col gap-y-3">
-            <Input/>
-            <Input/>
-            <Input/>
-            <Input/>
-            <Input/>
+            {inputs.map((input) => 
+              <Input key={input.id} {...input}
+              />
+            )}
+
           </div>
           <button className="btn-primary mt-4">BOOK NOW</button>
         </div>
