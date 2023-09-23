@@ -3,14 +3,16 @@ import { useFormik } from 'formik';
 import Image from "next/image";
 import Input from "./form/Input";
 import Title from "./ui/Title";
+import { reservationSchema } from '@/schema/Reservation';
 
 const Reservation = () => {
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 500));
     actions.resetForm();
+    console.log(JSON.stringify(values, null, 1));
   }
 
-  const {values, handleChange, handleSubmit} = useFormik({
+  const {values, handleChange, handleSubmit, touched, handleBlur, errors} = useFormik({
     initialValues: {
       fullname:'',
       phone:'',
@@ -19,12 +21,7 @@ const Reservation = () => {
       date:'',
     },
     onSubmit,
-
-    /*
-    onSubmit:(values) => {
-      console.log(JSON.stringify(values, null, 2));
-    }
-    */
+    validationSchema: reservationSchema,
   })
   
   const inputs = [
@@ -34,6 +31,8 @@ const Reservation = () => {
       type:'text',
       placeholder:'your full name',
       value: values.fullname,
+      errorMessage: errors.fullname,
+      touched: touched.fullname,
     },
     {
       id:2,
@@ -41,6 +40,8 @@ const Reservation = () => {
       type:'number',
       placeholder:'your phone number',
       value: values.phone,
+      errorMessage: errors.phone,
+      touched: touched.phone,
     },
     {
       id:3,
@@ -48,6 +49,8 @@ const Reservation = () => {
       type:'email',
       placeholder:'your email',
       value: values.email,
+      errorMessage: errors.email,
+      touched: touched.email,
     },
     {
       id:4,
@@ -55,6 +58,8 @@ const Reservation = () => {
       type:'number',
       placeholder:'how many persons?',
       value: values.persons,
+      errorMessage: errors.persons,
+      touched: touched.persons,
     },
     {
       id:5,
@@ -62,6 +67,8 @@ const Reservation = () => {
       type:'datetime-local',
       placeholder:'',
       value: values.date,
+      errorMessage: errors.date,
+      touched: touched.date,
     },
 ];
 
@@ -72,7 +79,7 @@ const Reservation = () => {
         <form onSubmit={handleSubmit} className="lg:flex-1 w-full">
           <div className="flex flex-col gap-y-3">
               {inputs.map((input) => 
-                <Input key={input.id} {...input} onChange={handleChange}
+                <Input key={input.id} {...input} onChange={handleChange} onBlur={handleBlur}
                 />
               )}
           </div>
