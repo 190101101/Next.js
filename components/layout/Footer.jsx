@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="bg-secondary text-white">
       <div className="container mx-auto pt-16 pb-6">
         <div className="flex md:justify-between justify-center text-center flex-wrap md:gap-y-0 gap-y-6 ">
-          <div className="md:flex-1">
+          <div className="  md:flex-1">
             <Title addClass="text-[30px]">Contact Us</Title>
             <div className="flex flex-col gap-y-2 mt-3">
               <div className="flex items-center justify-center">

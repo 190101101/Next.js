@@ -5,7 +5,6 @@ import MenuWrapper from "../../components/product/MenuWrapper"
 import  About from '@/pages/About'
 import Reservation from "@/components/Reservation"
 import Customers from "@/components/customers/Customers"
-import Footer from "@/components/layout/Footer";
 
 const home = () => {
   return (
@@ -16,7 +15,6 @@ const home = () => {
       <About/>
       <Reservation/>
       <Customers/>
-      <Footer/>
     </React.Fragment>
   )
 }
