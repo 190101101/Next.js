@@ -1,7 +1,6 @@
 
 const Input = (props) => {
   const {type, errorMessage, touched, placeholder, ...inputs} = props;
-  console.log(errorMessage);
 
   return (
     <div className="w-full">

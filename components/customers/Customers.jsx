@@ -47,7 +47,7 @@ const Customers = () => {
   };
 
   return (
-    <div className="container mx-auto my-20">
+    <div className="container mx-auto mb-20 mt-12">
         <div>
             <Title addClass={"text-[40px] text-center"}>What Says Our Customers</Title>
         </div>
@@ -55,8 +55,10 @@ const Customers = () => {
             <Slider {...settings}>
                 <CustomerItem image={"/images/client1.png"}/>
                 <CustomerItem image={"/images/client2.png"}/>
-                <CustomerItem image={"/images/client11.jpg"}/>
-                <CustomerItem image={"/images/client22.jpg"}/>
+                <CustomerItem image={"/images/client1.png"}/>
+                <CustomerItem image={"/images/client2.png"}/>
+                <CustomerItem image={"/images/client1.png"}/>
+                <CustomerItem image={"/images/client2.png"}/>
             </Slider>
         </div>
     </div>
