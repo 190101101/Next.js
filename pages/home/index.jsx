@@ -6,7 +6,7 @@ import  About from '@/pages/About'
 import Reservation from "@/components/Reservation"
 import Customers from "@/components/customers/Customers"
 
-const home = () => {
+const Index = () => {
   return (
     <React.Fragment>
       <Carousel/>
@@ -19,4 +19,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Index

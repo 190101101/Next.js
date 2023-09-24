@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Title from '../components/ui/Title';
+import Title from './ui/Title';
 
 const About = () => {
   return (
