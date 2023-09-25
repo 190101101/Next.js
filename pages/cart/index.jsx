@@ -1,8 +1,7 @@
 import Title from "@/components/ui/Title";
 import Image from "next/image";
 
-const Cart = () => {
-
+const Index = () => {
   return (
     <div className="min-h-[calc(100vh_-_433px)]">
       <div className="flex justify-between items-center md:flex-row flex-col">
@@ -11,18 +10,10 @@ const Cart = () => {
               <table className="w-full text-sm text-center text-gray-500 min-w-[1000px]">
                 <thead className="text-xs text-gray-400 uppercase bg-gray-700">
                   <tr>
-                    <th scope="col" className="py-3 px-6">
-                      PRODUCT
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      EXTRAS
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      PRICE
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      QUANTITY
-                    </th>
+                    <th scope="col" className="py-3 px-6"> PRODUCT </th>
+                    <th scope="col" className="py-3 px-6"> EXTRAS </th>
+                    <th scope="col" className="py-3 px-6"> PRICE </th>
+                    <th scope="col" className="py-3 px-6"> QUANTITY </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -70,4 +61,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Index;
