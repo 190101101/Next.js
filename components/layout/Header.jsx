@@ -41,7 +41,7 @@ const Header = () => {
           )}
         </nav>
         <div className="flex items-center gap-x-4 text-white">
-          <Link href="">
+          <Link href="/auth/login">
             <FaUserAlt className="hover:text-primary transition-all"/>
           </Link> 
           <Link href="">

@@ -86,7 +86,7 @@ const Reservation = () => {
           <button type="submit" className="btn-primary mt-4">BOOK NOW</button>
         </form>
 
-        <div className="lg:flex-1 w-full !h-[384px]">
+        <div className="lg:flex-1 w-full !h-[345px]">
           <Image src="/images/map.png" alt=""  width={500} height={500}/>
           {/* 
         <iframe 
