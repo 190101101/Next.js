@@ -19,7 +19,7 @@ const MenuItem = ({image}) => {
         </p>
       </div>
       <div className="flex justify-between items-center mt-14 p-3">
-        <span>$20</span>
+        <span className="text-white">20$</span>
         <button className="btn-primary !w-10 !h-10 !rounded-full !p-0 grid place-content-center">
           <RiShoppingCart2Fill />
         </button>

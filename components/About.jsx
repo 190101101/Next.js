@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Title from './ui/Title';
 
 const About = () => {
@@ -13,7 +14,7 @@ const About = () => {
             <div className='md:w-1/2'>
               <Title addClass="text-[40px]">We Are Food</Title>
               <p className='my-5 flex flex-col items-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat porro laborum optio in dolore sint sapiente nulla cupiditate officiis velit alias facilis beatae quisquam adipisci ut, quas vero esse mollitia? Impedit ut modi eveniet officia ipsam! Laudantium officia accusamus odit labore sed earum sequi. Quis dolore incidunt tempora aut ipsum.</p>
-              <button className='btn-primary'>Read more</button>
+              <Link href="/about" className='btn-primary'>Read more</Link>
             </div>
         </div>
     </div>
