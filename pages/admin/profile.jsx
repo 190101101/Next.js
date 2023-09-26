@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import Product from '@/components/admin/product';
+import Order from '@/components/admin/Order';
 
 const Index = () => {
   const [tabs, setTabs] = useState(1);
@@ -28,7 +29,7 @@ const Index = () => {
               <button className="ml-1">category</button>
             </li>
             <li onClick={() => {setTabs(4)}} className={`${tabs === 4 && 'bg-primary'} border w-full p-3 cursor-pointer hover:bg-primary list-none hover:text-white transition-all`}>
-              <i className='fa fa-home'></i>
+              <i className='fa fa-window-maximize'></i>
               <button className="ml-1">footer</button>
             </li>
            
@@ -40,6 +41,7 @@ const Index = () => {
       </div>
 
       {tabs === 1 && <Product/> }
+      {tabs === 2 && <Order/> }
     </div>
   )
 }

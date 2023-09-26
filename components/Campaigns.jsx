@@ -5,7 +5,7 @@ import {MdShoppingCart} from 'react-icons/md';
 const CampaignsItem = ({image}) => {
   return (
     <div className='bg-secondary flex-1 rounded-md py-5 px-[15px] flex items-center gap-x-4'>
-      <div className="relative md:w-44 md:h-44 w-36 h-36 content-[''] absolute w-full -h-full border-[5px] border-primary rounded-full overflow-hidden gap-x-4">
+      <div className="relative md:w-44 md:h-44 w-36 h-36 content-[''] -h-full border-[5px] border-primary rounded-full overflow-hidden gap-x-4">
         <Image 
           src={image} 
           alt='' 
