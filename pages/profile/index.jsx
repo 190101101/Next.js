@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Account from '@/components/profile/Account';
 import Password from '@/components/profile/Password';
+import Orders from '@/components/profile/Orders';
 
 const Index = () => {
   const [tabs, setTabs] = useState(1);
@@ -35,6 +36,7 @@ const Index = () => {
 
       {tabs === 1 && <Account /> }
       {tabs === 2 && <Password/> }
+      {tabs === 3 && <Orders/> }
     </div>
   )
 }
