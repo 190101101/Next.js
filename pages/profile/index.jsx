@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import Account from '@/components/profile/Account';
+import Password from '@/components/profile/Password';
 
 const Index = () => {
   const [tabs, setTabs] = useState(1);
@@ -32,8 +33,8 @@ const Index = () => {
         </ul>
       </div>
 
-      {tabs === 1 && 
-        <Account /> }
+      {tabs === 1 && <Account /> }
+      {tabs === 2 && <Password/> }
     </div>
   )
 }
