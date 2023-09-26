@@ -1,7 +1,7 @@
 import Input from '@/components/form/Input';
 import Title from '@/components/ui/Title';
 import { useFormik } from 'formik';
-import { profileSchema } from '@/schema/profile';
+import { accountSchema } from '@/schema/account';
 
 const Account = () => {
   
@@ -21,7 +21,7 @@ const Account = () => {
       bio:'',
     },
     onSubmit,
-    validationSchema: profileSchema,
+    validationSchema: accountSchema,
   })
 
     const inputs = [
