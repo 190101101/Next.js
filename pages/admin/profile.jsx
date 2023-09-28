@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import Product from '@/components/admin/product';
-import Order from '@/components/admin/Order';
+import Order from '@/components/admin/order';
+import Category from '@/components/admin/category';
 
 const Index = () => {
   const [tabs, setTabs] = useState(1);
@@ -42,6 +43,7 @@ const Index = () => {
 
       {tabs === 1 && <Product/> }
       {tabs === 2 && <Order/> }
+      {tabs === 3 && <Category/> }
     </div>
   )
 }
