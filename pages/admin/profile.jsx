@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Product from '@/components/admin/product';
 import Order from '@/components/admin/order';
 import Category from '@/components/admin/category';
+import Footer from '@/components/admin/footer';
 
 const Index = () => {
   const [tabs, setTabs] = useState(1);
@@ -44,6 +45,7 @@ const Index = () => {
       {tabs === 1 && <Product/> }
       {tabs === 2 && <Order/> }
       {tabs === 3 && <Category/> }
+      {tabs === 4 && <Footer/> }
     </div>
   )
 }
