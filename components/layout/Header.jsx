@@ -49,7 +49,7 @@ const Header = () => {
           <Link href="/cart">
             <span className="relative">
               <FaShoppingCart className="hover:text-primary transition-all"/>
-              <span className="absolute top-[-11px] left-2 w-4 h-4 text-xs text-secondary font-semibold inline-block  bg-primary grid place-content-center rounded-full">{cart.products.length && cart.products.length}</span>
+              <span className="absolute top-[-11px] left-2 w-4 h-4 text-xs text-secondary font-semibold  bg-primary grid place-content-center rounded-full">{cart.products.length && cart.products.length}</span>
             </span>
           </Link> 
           <button onClick={() => setIsSearchModal(true)}>
