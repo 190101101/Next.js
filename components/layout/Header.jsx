@@ -5,11 +5,13 @@ import Search from "../ui/Search"
 import {FaUserAlt, FaShoppingCart, FaSearch} from "react-icons/fa"
 import {GiHamburgerMenu,GiCancel} from "react-icons/gi"
 import Link from 'next/link';
+import { useSelector} from "react-redux";
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
   const router = useRouter();
+  const cart = useSelector((state) => state.cart);
 
   return (
     <div className={`h-[5.5rem] z-50 relative ${router.asPath == '/' ? 'bg-transparent' : 'bg-secondary'}`}>
@@ -45,7 +47,10 @@ const Header = () => {
             <FaUserAlt className="hover:text-primary transition-all"/>
           </Link> 
           <Link href="/cart">
-            <FaShoppingCart className="hover:text-primary transition-all"/>
+            <span className="relative">
+              <FaShoppingCart className="hover:text-primary transition-all"/>
+              <span className="absolute top-[-11px] left-2 w-4 h-4 text-xs text-secondary font-semibold inline-block  bg-primary grid place-content-center rounded-full">{cart.products.length && cart.products.length}</span>
+            </span>
           </Link> 
           <button onClick={() => setIsSearchModal(true)}>
             <FaSearch className="hover:text-primary transition-all"/>
