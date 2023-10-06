@@ -1,1 +1,2 @@
 npm install next-auth
+npm install @auth/mongodb-adapter mongodb --legacy-peer-deps
