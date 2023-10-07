@@ -1,3 +1,4 @@
+import axios from "axios";
 import Input from "@/components/form/Input";
 import Title from "@/components/ui/Title";
 import { useFormik } from 'formik';
@@ -7,9 +8,17 @@ import Link from "next/link";
 
 const Register = () => {
     const onSubmit = async (values, actions) => {
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        actions.resetForm();
-        console.log(JSON.stringify(values, null, 1));
+      /*
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      actions.resetForm();
+      */ 
+
+     try{
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/users/register`, values);
+     }catch(err){
+      console.log(err);
+     }
+
     }
       
     const {values, handleChange, handleSubmit, touched, handleBlur, errors} = useFormik({
@@ -76,7 +85,7 @@ const Register = () => {
                 </div>
                 <div className="flex flex-col w-full gap-y-2 my-4">
                   <button type="submit" className="btn-primary">Register</button>
-                  <button className="btn-primary !bg-secondary flex justify-center items-center gap-1">
+                  <button type="button" className="btn-primary !bg-secondary flex justify-center items-center gap-1">
                     <BsGithub/>
                     Github
                   </button>
