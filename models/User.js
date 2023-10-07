@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-    name:{
+    fullname:{
         type: String,
         required:true,
     },
@@ -21,11 +21,9 @@ const UserSchema = new Schema({
     },
     phone:{
         type: Number,
-        required:true,
     },
     address:{
         type: String,
-        required:true,
     },
     job:{
         type: String,
