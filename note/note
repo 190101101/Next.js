@@ -54,7 +54,7 @@ base\10 admin\44 Admin Page Order Component
 base\10 admin\45 Admin Page Category Component
 base\10 admin\46 Admin Page Footer Component
 
-base\11 redux\47 What is Redux? Redux-Toolkit Installation
+base\11 redux\47 What is Redux Redux-Toolkit Installation
 base\11 redux\48 Product Detail Price Calculation with Redux-Toolkit
 base\11 redux\49 Redux-Toolkit Store Installation
 base\11 redux\50 addProduct and reset Actions
@@ -78,37 +78,37 @@ base\13 next auth\65 Profile Page getSession Operation
 base\13 next auth\66 Next.js id Operations
 base\13 next auth\67 Profile Page General Update Procedures
 
-base\14 category server\68 Category Get and Post Transactions
-base\14 category server\69 Category Delete Operation
-base\14 category server\70 Menu Category Editing
+base\14 category\68 Category Get and Post Transactions
+base\14 category\69 Category Delete Operation
+base\14 category\70 Menu Category Editing
 
-base\15 product server\71 AddProduct Component
-base\15 product server\72 Creating a Product Model
-base\15 product server\73 Product Get and Post Transactions
-base\15 product server\74 Product Image Operations
-base\15 product server\75 Cloudinary Settings
-base\15 product server\76 Creating a New Product
-base\15 product server\77 Menu Page
-base\15 product server\78 Product Delete Process
-base\15 product server\79 Product Detail Page
+base\15 product\71 AddProduct Component
+base\15 product\72 Creating a Product Model
+base\15 product\73 Product Get and Post Transactions
+base\15 product\74 Product Image Operations
+base\15 product\75 Cloudinary Settings
+base\15 product\76 Creating a New Product
+base\15 product\77 Menu Page
+base\15 product\78 Product Delete Process
+base\15 product\79 Product Detail Page
 
-base\16 order server\80 Order Model and API Transactions
-base\16 order server\81 Creating a New Order
-base\16 order server\82 Admin Order Management
-base\16 order server\83 Profile Order Transactions
+base\16 order\80 Order Model and API Transactions
+base\16 order\81 Creating a New Order
+base\16 order\82 Admin Order Management
+base\16 order\83 Profile Order Transactions
 
 base\17 search\84 search
 
-base\18 footer server\85 Footer Model Creation
-base\18 footer server\86 Creating Footer API
-base\18 footer server\87 Footer Data Dressing
-base\18 footer server\88 Admin Footer Transactions
+base\18 footer\85 Footer Model Creation
+base\18 footer\86 Creating Footer API
+base\18 footer\87 Footer Data Dressing
+base\18 footer\88 Admin Footer Transactions
 
 base\19 route change progress\89 Route Change Progress Setup
 
 base\20 refactoring\90 Refactoring 1
 base\20 refactoring\91 Refactoring 2
 
-base\21 task\92 What Can Be Added to the Project?
+base\21 task\92 What Can Be Added to the Project
 
 base\22 deployment\93 deployment

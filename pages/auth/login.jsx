@@ -11,9 +11,9 @@ const Login = () => {
   console.log(session);
 
   const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    actions.resetForm();
-    console.log(JSON.stringify(values, null, 1));
+    const {email, password} = values;
+    let options = {redirect:false, email, password};
+    const res = await signIn('credentials', options);
   };
 
   const { values, handleChange, handleSubmit, touched, handleBlur, errors } =
