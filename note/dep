@@ -3,3 +3,4 @@ npm install @auth/mongodb-adapter mongodb --legacy-peer-deps
 npm install bcryptjs
 npm install axios
 npm install react-toastify
+npm install cookie
