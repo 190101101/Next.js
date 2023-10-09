@@ -8,7 +8,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 
-const Index = () => {
+const Login = () => {
   const {push} = useRouter();
 
   const onSubmit = async (values, actions) => {
@@ -93,4 +93,21 @@ const Index = () => {
   );
 };
 
-export default Index;
+export const getServerSideProps = (ctx) => {
+  const myCookie = ctx.req?.cookies || "";
+
+  if(myCookie.token === process.env.ADMIN_TOKEN){
+    return{
+      redirect:{
+        destination:'/admin/profile',
+        permanent:false,
+      }
+    }
+  }
+
+  return {
+    props:{},
+  }
+}
+
+export default Login;
