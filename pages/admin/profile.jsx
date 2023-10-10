@@ -89,9 +89,7 @@ const Profile = () => {
 
           <li
             onClick={closeAdminAccount}
-            className={`${
-              tabs === 5 && "bg-primary"
-            } border w-full p-3 cursor-pointer hover:bg-primary list-none hover:text-white transition-all`}
+            className={`border w-full p-3 cursor-pointer hover:bg-primary list-none hover:text-white transition-all`}
           >
             <i className="fa fa-sign-out"></i>
             <button className="ml-1">exit</button>

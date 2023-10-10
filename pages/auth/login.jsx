@@ -5,16 +5,24 @@ import { loginSchema } from "@/schema/login";
 import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
 import { useSession, signIn } from "next-auth/react";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Login = () => {
   const { data: session } = useSession();
-  console.log(session);
+  const {push} = useRouter();
 
   const onSubmit = async (values, actions) => {
     const {email, password} = values;
     let options = {redirect:false, email, password};
     const res = await signIn('credentials', options);
   };
+
+  useEffect(() => {
+    if(session){
+      push('/profile');
+    }
+  }, [session, push]);
 
   const { values, handleChange, handleSubmit, touched, handleBlur, errors } =
     useFormik({
