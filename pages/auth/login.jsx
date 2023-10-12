@@ -4,25 +4,24 @@ import { useFormik } from "formik";
 import { loginSchema } from "@/schema/login";
 import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
-import { useSession, signIn } from "next-auth/react";
-import { useEffect } from "react";
+import { getSession, signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
 const Login = () => {
-  const { data: session } = useSession();
   const {push} = useRouter();
 
   const onSubmit = async (values, actions) => {
     const {email, password} = values;
     let options = {redirect:false, email, password};
-    const res = await signIn('credentials', options);
+    try{
+      const res = await signIn('credentials', options);
+      push('/profile');
+        
+    }catch(err){
+      console.log(err);        
+    }
   };
 
-  useEffect(() => {
-    if(session){
-      push('/profile');
-    }
-  }, [session, push]);
 
   const { values, handleChange, handleSubmit, touched, handleBlur, errors } =
     useFormik({
@@ -95,5 +94,23 @@ const Login = () => {
     </div>
   );
 };
+
+export const getServerSideProps = async ({ req }) => {
+  const session = await getSession({ req });
+
+  if (session) {
+    return {
+      redirect:{
+        destination:"/profile",
+        permanent:false,
+      }
+    };
+  }
+
+  return {
+    props: {},
+  };
+};
+
 
 export default Login;

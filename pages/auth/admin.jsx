@@ -7,9 +7,9 @@ import Link from "next/link";
 
 const Admin = () => {
     const onSubmit = async (values, actions) => {
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        actions.resetForm();
-        console.log(JSON.stringify(values, null, 1));
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      actions.resetForm();
+      console.log(JSON.stringify(values, null, 1));
     }
       
     const {values, handleChange, handleSubmit, touched, handleBlur, errors} = useFormik({
