@@ -5,8 +5,9 @@ import Account from "@/components/profile/Account";
 import Password from "@/components/profile/Password";
 import Orders from "@/components/profile/Orders";
 import { useRouter } from "next/router";
+import axios from "axios";
 
-const Index = ({session}) => {
+const Index = ({ session }) => {
   const [tabs, setTabs] = useState(1);
   const { push } = useRouter();
 
@@ -15,9 +16,11 @@ const Index = ({session}) => {
       signOut({ redirect: false });
     }
   };
-  
+
   useEffect(() => {
-    push("/auth/login");
+    if (!session) {
+      push("/auth/login");
+    }
   }, [session, push]);
 
   return (
@@ -88,17 +91,21 @@ const Index = ({session}) => {
   );
 };
 
-export const getServerSideProps = async ({ req }) => {
+export const getServerSideProps = async ({ req, params }) => {
   const session = await getSession({ req });
 
   if (!session) {
     return {
-      redirect:{
-        destination:"/auth/login",
-        permanent:false,
-      }
+      redirect: {
+        destination: "/auth/login",
+        permanent: false,
+      },
     };
   }
+
+  const user = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_URL}/users/${params.id}`
+  );
 
   return {
     props: {
